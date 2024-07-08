@@ -50,7 +50,7 @@
 
 *We wont use the ia for generate code directly, because in small projects it makes slower the development for the testing to implement the generated code
 
-*We'll ask to the AI for be a front-end senior development that is a specialist in HTML and CSS desing
+*We'll ask to the AI for be a front-end senior developer that is a specialist in HTML and CSS desing
 -(HTML or CSS could be any other front end tecnology for that will ask concepts and that stuff)
 
 *We'll adapt our personal chat bot asking for the fundamentals of the tecnologies and concepts that we'll use in the project (responsive designg, camelCase names, semantic HTML, react concepts)
