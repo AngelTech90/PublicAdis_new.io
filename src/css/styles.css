@@ -8,7 +8,7 @@
     --global-font: "Poppins", sans-serif;
 
     /* *Titles size */
-    --main-titles-size:3rem;
+    --main-titles-size:2.3rem;
     --sub-titles-size:1.5rem;
     --title-size:1.2rem;
 
@@ -273,8 +273,8 @@ body{
 /* * MAIN SLIDER COMPONENT: */
 .sliderImageContainer{
 
-    width: 870px;
-    height: 570px;
+    width: 800px;
+    height: 500px;
 
     display: flex;
     justify-content: center;
@@ -284,15 +284,15 @@ body{
 
 #webAppImage{
 
-    width: 850px;
-    height: 550px;
+    width: 740px;
+    height: 440px;
 
 }
 
 #phoneAppImage{
 
-    width: 460px;
-    height: 610px;
+    width: 350px;
+    height: 500px;
 
 }
 
@@ -392,7 +392,7 @@ body{
 
 .serviceTitle{
 
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     width: 100%;
     height: fit-content;
 
@@ -418,7 +418,7 @@ body{
     height: 85%;
 
     padding-left: 3%;
-    padding-top: 8%;
+    padding-top: 12%;
 
 }
 
