@@ -7,10 +7,22 @@
     /* * global font style: */
     --global-font: "Poppins", sans-serif;
 
+    /* * Radius size: */
+    --app-button-radius: 1rem;
+
     /* *Titles size */
     --main-titles-size:2.3rem;
     --sub-titles-size:1.5rem;
     --title-size:1.2rem;
+    --section-main-title-span: 2.4rem;;
+
+    /* *Service titles size: */
+    --service-title-span-size: 1.6rem;
+    --service-title-font-size: 1.5rem;
+
+    /* *Benefits titles size */
+    --benefit-title-font-size: 1.4rem;
+    --benefit-title-span-font-size: 1.5rem;
 
     /* * Font size */
     --normal-font-size:1rem;
@@ -22,6 +34,18 @@
     --access-icon-width: 2.5rem;
     --access-icon-height: 2.5rem;
 
+    /* *Slider component dimensions: */
+    --slider-image-container-width: 800px;
+    --slider-image-container-height: 500px;
+
+    --web-app-image-width: 740px;
+    --web-app-image-height: 440px; 
+
+    --phone-app-image-width: 350px;
+    --phone-app-image-height: 500px;
+
+    /*Animation move value*/
+    --slider-animation-translate-size: 1rem;
 
     /* * Images size: */
 
@@ -36,18 +60,27 @@
 
     --component-color: #3f5bd6;
 
-    --main-title-color: #023028;
-    --main-span-color: #062e49;
+    --benefit-title-span-color: #45d10e;
 
-    --hover-main: #067260;
+    --main-section-title-span-color: #07c1e2;
+
+    --service-title-span-color: #0463d1;
+
+    --main-title-color: #0b8b76;
+    --main-span-color: #035891;
+
+    --hover-main: #10c4a6;
     --hover-main-span: #0d588a;
 
     --app-button-color: #2342cf;
-
     --app-button-color-text:whitesmoke;
+    --app-button-hover-color: #0b7afa;
+
+    
+    
 
     /* * General transition time: */
-    --general-transition-time: 300ms;
+    --general-transition-time: 400ms;
 
 }
 
@@ -94,7 +127,7 @@ body{
 .pageSection{
 
     width: 100%;
-    height: 90vh;
+    height: 100vh;
 
     display: flex;
 
@@ -135,7 +168,7 @@ body{
     background-color: var(--component-color);
 
     width: 96%;
-    height: 16vh;
+    height: 15vh;
 
     padding: 2%;
 
@@ -157,16 +190,16 @@ body{
 
     color: var(--app-button-color-text);
 
-    border-radius: 1rem;
+    border-radius: var(--app-button-radius);
 
     border-style: hidden;
 
     display: flex; 
     align-items: center;
 
-    gap: 3%;
+    gap: 10%;
 
-    transition: all 450ms;
+    transition: all var(--general-transition-time);
 
 }
 
@@ -174,12 +207,31 @@ body{
 
     scale: 1.03;
 
+    background-color: var(--app-button-hover-color);
+
 }
 
 .appButtonLink{
 
     color: var(--app-button-color-text);
     text-decoration: none;
+
+}
+
+.sectionMainTitle{
+
+    color: var(--font-color);
+    width: 100%;
+    height: 10%;
+    text-align: center;
+
+    font-size: var(--main-titles-size);
+}
+
+.sectionMainTitleSpan{
+
+    color: var(--main-section-title-span-color);
+    font-size: var(--section-main-title-span);
 
 }
 
@@ -195,6 +247,8 @@ body{
     display: flex;
 
     align-items: center;
+
+    gap:2%;
 
 }
 
@@ -214,6 +268,8 @@ body{
 
     text-decoration: none;
 
+    color: whitesmoke;
+
     font-size: var(--link-font-size);
 
     transition: all var(--general-transition-time);
@@ -222,8 +278,8 @@ body{
 
 .navOption:hover{
 
-    color: azure;
-    scale: 1.02;
+    color: var(--hover-main);
+    scale: 1.005;
 
 }
 
@@ -258,8 +314,12 @@ body{
     text-decoration: none;
 
     width: 20%;
+    height: fit-content;
 
     transition: all var(--general-transition-time);
+
+    display: flex;
+    align-items: center;
 
 }
 
@@ -269,12 +329,18 @@ body{
 
 }
 
+#logoIcon{
+
+    border-radius: 100%;
+
+}
+
 
 /* * MAIN SLIDER COMPONENT: */
 .sliderImageContainer{
 
-    width: 800px;
-    height: 500px;
+    width: var(--slider-image-container-width);
+    height: var(--slider-image-container-height);
 
     display: flex;
     justify-content: center;
@@ -284,15 +350,21 @@ body{
 
 #webAppImage{
 
-    width: 740px;
-    height: 440px;
+    width: var(--web-app-image-width);
+    height: var(--web-app-image-height) ;
+
+    animation: float 2s linear infinite;
+    transition: all var(--general-transition-time);
 
 }
 
 #phoneAppImage{
 
-    width: 350px;
-    height: 500px;
+    width: var(--phone-app-image-width) ;
+    height: var(--phone-app-image-height);
+
+    animation: float 2s linear infinite;
+    transition: all var(--general-transition-time);
 
 }
 
@@ -307,16 +379,9 @@ body{
 
     50%{
 
-        transform: translateY(1rem);
+        transform: translateY(var(--slider-animation-translate-size));
 
     }
-
-}
-
-.mainSliderImage{
-
-    animation: float 2s linear infinite;
-    transition: all 400ms;
 
 }
 
@@ -380,8 +445,10 @@ body{
 
 .service{
 
-    width: 420px;
-    height: 470px;
+    width: 33.33%;
+    height: fit-content;
+
+    box-sizing: border-box;
 
     display: flex;
     flex-direction: column;
@@ -392,7 +459,7 @@ body{
 
 .serviceTitle{
 
-    font-size: 1.5rem;
+    font-size: var(--service-title-font-size);
     width: 100%;
     height: fit-content;
 
@@ -400,14 +467,67 @@ body{
 
 }
 
-#servicesMainTitle{
 
-    color: var(--font-color);
-    width: 100%;
-    height: 10%;
-    text-align: center;
+.serviceTitleSpan{
+
+    color: var(--service-title-span-color);
+    font-size: var(--service-title-span-size);
 
 }
+
+
+/* * Benefits Component classes: */
+
+.benefitComponent{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    width: 45%;
+    height: 95%;
+
+}
+
+.benfitsContainer{
+
+    display: flex;
+
+    justify-content: center;
+    align-items: end;
+
+    width: 100%;
+    height: 45%;
+
+}
+
+#benefitsMainTitle{
+
+    margin-top: 2%;
+
+}
+
+.benefitTitle{
+
+    font-size: var(--benefit-title-font-size);
+    color: var(--font-color);
+
+    width: fit-content;
+    height: fit-content;
+
+    margin-bottom: 8.5%;
+
+}
+
+.benefitTitleSpan{
+
+    font-size: var(--benefit-title-span-font-size);
+    color: var(--benefit-title-span-color);
+
+}
+
+
 
 /* * SECTION STYLES */
 
@@ -433,6 +553,11 @@ body{
 
 }
 
+#mainSection{
+
+    height: 95vh;
+
+}
 
 /* * Services Section: */
 
@@ -455,3 +580,14 @@ body{
     flex-direction: column;
 
 }
+
+
+/* *Benefits section styles: */
+
+#benefitsSection{
+
+    display: flex;
+    flex-direction: column;
+
+}
+
