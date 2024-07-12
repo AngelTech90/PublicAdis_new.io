@@ -11,14 +11,15 @@
     --app-button-radius: 1rem;
 
     /* *Titles size */
-    --main-titles-size:2.3rem;
+    --main-titles-size:2.5rem;
     --sub-titles-size:1.5rem;
     --title-size:1.2rem;
     --section-main-title-span: 2.4rem;;
 
     /* *Service titles size: */
-    --service-title-span-size: 1.6rem;
-    --service-title-font-size: 1.5rem;
+    --service-title-span-size: 1.45rem;
+    --service-title-font-size: 1.35rem;
+    --service-title-radius-value: 1.2rem;
 
     /* *Benefits titles size */
     --benefit-title-font-size: 1.4rem;
@@ -28,30 +29,48 @@
     --normal-font-size:1rem;
 
     /* * Links size: */
-    --link-font-size:1.1rem;
+    --link-font-size:1.3rem;
+
+    /* * App button link font size: */
+    --app-button-font-size: 1.3rem;
 
     /* *Icons size */
     --access-icon-width: 2.5rem;
     --access-icon-height: 2.5rem;
 
-    /* *Slider component dimensions: */
-    --slider-image-container-width: 800px;
-    --slider-image-container-height: 500px;
+    /* *Service icon dimensions: */
+    --service-icon-width: 62%;
+    --service-icon-height: 62%;
 
-    --web-app-image-width: 740px;
-    --web-app-image-height: 440px; 
+    /* *Benefit icon dimensions: */
+    --benefit-icon-width: 104%;
+    --benefit-icon-height: 104%;
 
-    --phone-app-image-width: 350px;
-    --phone-app-image-height: 500px;
 
     /*Animation move value*/
     --slider-animation-translate-size: 1rem;
 
+
     /* * Images size: */
 
+    /* *Slider images dimensions: */
+    --slider-image-container-width: 100%;
+    --slider-image-container-height: 100%;
+
+    --web-app-image-width: 113%;
+    --web-app-image-height: 60vh; 
+
+    --phone-app-image-width: 34vw;
+    --phone-app-image-height: 105vh;
+
+
     /* * Buttons size: */
-    --app-button-width: 35%;
+    --app-button-width: 37%;
     --app-button-height: 3rem;
+
+
+    /* *cards value: */
+    --card-radius-value: 1.3rem;
 
     /* * Colors of the page */
     --font-color:#212529;
@@ -82,6 +101,14 @@
     /* * General transition time: */
     --general-transition-time: 400ms;
 
+
+    /* * shadows size: */
+    --general-shadow-color: black;
+    --general-shadow-x: 2rem;
+    --general-shadow-y: 2rem;
+
+
+
 }
 
 /* * We set our universal settings */
@@ -102,13 +129,11 @@
 body{
 
     display: flex;
-
-    width: 100vw;
-    height: 100vh;
-
     margin: 0;
     padding: 0%;
+    box-sizing: border-box;
 
+    background-color: var(--background-color);
 
 }
 
@@ -118,7 +143,7 @@ body{
 /* * Here we set our main contaier dimensions */
 .motherBox{
 
-    width: 100%;
+    width: 98.85vw;
     height: fit-content;
 
 }
@@ -130,6 +155,9 @@ body{
 
     display: flex;
 
+    align-items: center;
+
+    overflow: hidden;
 
 }
 
@@ -167,8 +195,10 @@ body{
 
     background-color: var(--component-color);
 
-    width: 100%;
+    width: 98.85vw;
     height: 15vh;
+
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.2);
 
 }
 
@@ -199,6 +229,8 @@ body{
 
     transition: all var(--general-transition-time);
 
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.2), 0 8px 10px -6px rgb(0 0 0 / 0.2);
+
 }
 
 .appButton:hover{
@@ -214,25 +246,28 @@ body{
     color: var(--app-button-color-text);
     text-decoration: none;
 
+    font-size: var(--app-button-font-size);
+
 }
 
 .sectionMainTitle{
 
-    color: var(--font-color);
-    width: 100%;
+    color: var(--main-section-title-span-color);
+
+    width: fit-content;
+
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+    padding: 0 5% 0 5%;
+
+    border-radius: var(--service-title-radius-value);
+    background-color: white;
+
+    box-sizing: border-box;
     height: 10%;
     text-align: center;
 
-    background-color: var(--background-color);
-
     font-size: var(--main-titles-size);
-}
-
-.sectionMainTitleSpan{
-
-    color: var(--main-section-title-span-color);
-    font-size: var(--section-main-title-span);
-
 }
 
 
@@ -246,13 +281,12 @@ body{
 
     display: flex;
 
-    width: fit-content;
-
     align-items: center;
 
-    gap:2%;
+    overflow: hidden;
 
-    width: 100%;
+    padding: 0;
+    margin: 0;
 
 }
 
@@ -318,7 +352,7 @@ body{
     text-decoration: none;
 
     width: 20%;
-    height: fit-content;
+    height: 100%;
 
     transition: all var(--general-transition-time);
 
@@ -343,12 +377,12 @@ body{
 /* * MAIN SLIDER COMPONENT: */
 .sliderImageContainer{
 
-    width: var(--slider-image-container-width);
-    height: var(--slider-image-container-height);
+    width: fit-content;
+    height: fit-content;
 
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
 
 }
 
@@ -389,13 +423,37 @@ body{
 
 }
 
+.mainSlider{
+
+    width: fit-content;
+    height: fit-content;
+
+}
+
+.mainSliderImage{
+
+    width: fit-content;
+    height: fit-content;
+
+}
+
 .mainSliderImage:hover{
 
     scale: 1.03;
 
+    margin: 0;
+    padding: 0;
+
 }
 
 .mainSliderImageLink{
+
+    width: fit-content;
+    height: fit-content;
+
+}
+
+.sliderTemplateContainer{
 
     width: fit-content;
     height: fit-content;
@@ -421,6 +479,7 @@ body{
     height: fit-content;
 
     display: flex;
+    justify-content: center;
     flex-flow: column;
     align-items: center;
 
@@ -429,6 +488,9 @@ body{
 #buttonsContainer{
 
     display: flex;
+
+    width: 100%;
+    height: fit-content;
 
     gap: 5%;
 
@@ -441,16 +503,8 @@ body{
 
     width: 100%;
     height: 90%;
-
-    display: flex;
-    flex-direction: column;
-
-}
-
-.service{
-
-    width: 33.33%;
-    height: fit-content;
+    padding-left: 2%;
+    padding-right: 2%;
 
     box-sizing: border-box;
 
@@ -461,13 +515,41 @@ body{
 
 }
 
+.service{
+
+    width: 33.33%;
+    height: 83%;
+
+    border-radius: var(--card-radius-value);
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.15), 0 8px 10px -6px rgb(0 0 0 / 0.15);
+
+}
+
 .serviceTitle{
 
     font-size: var(--service-title-font-size);
+
     width: 100%;
     height: fit-content;
 
     text-align: center;
+
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
 
 }
 
@@ -479,18 +561,40 @@ body{
 
 }
 
+.serviceIcon{
 
-/* * Benefits Component classes: */
+    width: var(--service-icon-width);
+    height: var(--service-icon-height);
+
+}
+
+#serviceMainTitle{
+
+    margin: 0 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/* * Benefits Components classes: */
 
 .benefitComponent{
 
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
 
-    width: 45%;
-    height: 95%;
+    width: 42%;
+    height: 100%;
+
+    border-radius: var(--card-radius-value);
+
+    background-color: white;
+
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.15), 0 8px 10px -6px rgb(0 0 0 / 0.15);
 
 }
 
@@ -499,18 +603,18 @@ body{
     display: flex;
 
     justify-content: center;
-    align-items: end;
+    align-items: center;
+
+    gap: 3%;
 
     width: 100%;
-    height: 45%;
+    height: 42%;
+
+    margin-bottom: 3%
 
 }
 
-#benefitsMainTitle{
 
-    margin-top: 0;
-
-}
 
 .benefitTitle{
 
@@ -519,8 +623,6 @@ body{
 
     width: fit-content;
     height: fit-content;
-
-    margin-bottom: 8.5%;
 
 }
 
@@ -531,6 +633,12 @@ body{
 
 }
 
+.benefitIcon{
+
+    width: var(--benefit-icon-width);
+    height: var(--benefit-icon-height);
+
+}
 
 
 /* * SECTION STYLES */
@@ -538,18 +646,31 @@ body{
 /* *Main section : */
 #infoBoxSection{
 
-    width: 55%;
-    height: 85%;
+    box-sizing: border-box;
 
-    padding-left: 3%;
-    padding-top: 12%;
+    width: 49%;
+    height: 100%;
+
+    padding-left: 2%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 
 }
 
 #sliderSection{
 
-    width: 45%;
-    height:  85%;
+    width: 51%;
+    height:  100%;
+
+    overflow: hidden;
+
+    padding: 0;
+    margin: 0;
+
+    gap: 0;
 
     display: flex;
     justify-content: center;
@@ -557,11 +678,6 @@ body{
 
 }
 
-#mainSection{
-
-    height: 95vh;
-
-}
 
 /* * Services Section: */
 
@@ -571,10 +687,9 @@ body{
     height: 50%;
 
     display: flex;
-    align-items: center;
     justify-content: center;
 
-    gap: 2%;
+    gap: 3%;
 
 }
 
@@ -583,7 +698,23 @@ body{
     display: flex;
     flex-direction: column;
 
-    background-color: white;
+    margin-bottom: 4%;
+
+}
+
+#sectionForServices1{
+
+    align-items: end;
+
+    padding-bottom: 1%;
+
+}
+
+#sectionForServices2{
+
+    align-items: start;
+
+    padding-top: 1%;
 
 }
 
@@ -595,7 +726,12 @@ body{
     display: flex;
     flex-direction: column;
 
-    background-color: white;
-
 }
 
+
+/* *Contacts section: */
+#contactsSection{
+
+    height: 104vh;
+
+}
