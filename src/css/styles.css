@@ -11,7 +11,7 @@
     --app-button-radius: 1rem;
 
     /* *Titles size */
-    --main-titles-size:2.5rem;
+    --main-titles-size:2.57rem;
     --sub-titles-size:1.5rem;
     --title-size:1.2rem;
     --section-main-title-span: 2.4rem;;
@@ -38,6 +38,9 @@
     --access-icon-width: 2.5rem;
     --access-icon-height: 2.5rem;
 
+    --main-icon-width: 3.2rem;
+    --main-icon-heigth: 3.2rem;
+
     /* *Service icon dimensions: */
     --service-icon-width: 62%;
     --service-icon-height: 62%;
@@ -57,11 +60,14 @@
     --slider-image-container-width: 100%;
     --slider-image-container-height: 100%;
 
-    --web-app-image-width: 113%;
+    --web-app-image-width: 66vw;
     --web-app-image-height: 60vh; 
 
     --phone-app-image-width: 34vw;
-    --phone-app-image-height: 105vh;
+    --phone-app-image-height: 109vh;
+
+    --app-slider-image-width: 27vw;
+    --app-slider-image-height: 87vh;
 
 
     /* * Buttons size: */
@@ -85,11 +91,11 @@
 
     --service-title-span-color: #0463d1;
 
-    --main-title-color: #0b8b76;
-    --main-span-color: #035891;
+    --main-title-color: #ffffff;
+    --main-span-color: #ffffff;
 
-    --hover-main: #10c4a6;
-    --hover-main-span: #1177bb;
+    --hover-main: #09f5ce;
+    --hover-main-span: #079cff;
 
     --app-button-color: #2342cf;
     --app-button-color-text:whitesmoke;
@@ -229,6 +235,9 @@ body{
 
     transition: all var(--general-transition-time);
 
+    padding: 0 1.2% 0 1.2%;
+    margin-top: 5%;
+
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.2), 0 8px 10px -6px rgb(0 0 0 / 0.2);
 
 }
@@ -351,6 +360,8 @@ body{
 
     text-decoration: none;
 
+    margin-left: 2.5%;
+
     width: 20%;
     height: 100%;
 
@@ -370,6 +381,9 @@ body{
 #logoIcon{
 
     border-radius: 100%;
+
+    width: var(--main-icon-width);
+    height: var(--main-icon-heigth);
 
 }
 
@@ -406,7 +420,8 @@ body{
 
 }
 
-/* *Animation of the images */
+/**Animation of the images*/
+
 @keyframes float {
 
     0%, 100%{
@@ -423,26 +438,9 @@ body{
 
 }
 
-.mainSlider{
-
-    width: fit-content;
-    height: fit-content;
-
-}
-
-.mainSliderImage{
-
-    width: fit-content;
-    height: fit-content;
-
-}
-
 .mainSliderImage:hover{
 
     scale: 1.03;
-
-    margin: 0;
-    padding: 0;
 
 }
 
@@ -453,10 +451,9 @@ body{
 
 }
 
-.sliderTemplateContainer{
+#proveSliderContainer2{
 
-    width: fit-content;
-    height: fit-content;
+    overflow: hidden;
 
 }
 
@@ -466,10 +463,16 @@ body{
 
 #mainText{
 
-    width: fit-content;
+    width: 90%;
     height: fit-content;
 
+    display: flex;
+    justify-content: start;
+
     color: var(--font-color);
+
+    margin-right: 10%;
+    margin-bottom: 3%;
 
 }
 
@@ -570,7 +573,7 @@ body{
 
 #serviceMainTitle{
 
-    margin: 0 ;
+    margin: 2% 0 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -640,6 +643,20 @@ body{
 
 }
 
+#benefitsMainTitle{
+
+    margin-bottom: 2%;    
+
+}
+
+
+/* * App slider section components: */
+.appSliderImage{
+
+    width: var(--app-slider-image-width);
+    height: var(--app-slider-image-height);
+
+}
 
 /* * SECTION STYLES */
 
@@ -648,7 +665,7 @@ body{
 
     box-sizing: border-box;
 
-    width: 49%;
+    width: 51%;
     height: 100%;
 
     padding-left: 2%;
@@ -662,7 +679,7 @@ body{
 
 #sliderSection{
 
-    width: 51%;
+    width: 49%;
     height:  100%;
 
     overflow: hidden;
@@ -715,6 +732,7 @@ body{
     align-items: start;
 
     padding-top: 1%;
+    padding-bottom: 1%;
 
 }
 
@@ -735,3 +753,14 @@ body{
     height: 104vh;
 
 }
+
+
+/* * App slider section: */
+#appSliderSection{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
