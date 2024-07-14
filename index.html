@@ -512,14 +512,16 @@
             </section>
 
 
+            <!-- *Slider component section: -->
             <section class = "pageSection" id = "appSliderSection">
 
                 <main>
 
+                    <!-- *Alpine component: -->
                     <div x-data="imageSlider" class="relative" x-init="
                 
+                    /* *Vars for save our intervals: */
                         let setAnimation1, setAnimation2;
-
 
                         /* * This functions works for call 'forward()' for iterate the images array index */
                         function animation1(){
@@ -552,13 +554,13 @@
                         
 
                         /* *And once we reach the first index element we stop our interval and call our animation 1 */
-                                    if(currentIndex == 1){
+                                if(currentIndex == 1){
 
-                                        clearInterval(setAnimation2);
+                                    clearInterval(setAnimation2);
 
-                                        animation1();
+                                    animation1();
 
-                                    }
+                                }
 
                                 }, 4500);
                                 
