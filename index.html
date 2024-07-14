@@ -422,7 +422,7 @@
 
 
             <!-- * Benefits Section -->
-            <section id = "benefitsSection" class = "pageSection mb-[4%]">
+            <section id = "benefitsSection" class = "pageSection mb-[0.5%]">
 
                 <h2 class = "sectionMainTitle" id = "benefitsMainTitle">Beneficios de anunciarte con PublicAdis</h2>
 
@@ -520,7 +520,6 @@
                     <!-- *Alpine component: -->
                     <div x-data="imageSlider" class="relative" x-init="
                 
-                    /* *Vars for save our intervals: */
                         let setAnimation1, setAnimation2;
 
                         /* * This functions works for call 'forward()' for iterate the images array index */
@@ -571,7 +570,7 @@
                         
                 ">
                 
-                        <div id = "proveSliderContainer" class="relative overflow-hidden w-[45vw] h-[99vh] bg-white shadow-xl rounded-[1.2rem]">
+                        <div id = "proveSliderContainer" class="relative overflow-hidden w-[45vw] h-[95.2vh] bg-white shadow-xl rounded-[1.2rem]">
 
                             <template x-for="(sliderImage, index1) in sliderImages">
 
@@ -579,7 +578,7 @@
 
                                     <p x-text="sliderImage.step" class = "stepMessage top-0 absolute text-center w-[100%] h-fit"></p>
 
-                                    <img :src="sliderImage.src" alt="image" class="appSliderImage mt-[16%]" />
+                                    <img :src="sliderImage.src" alt="image" class="appSliderImage mt-[15%]" />
 
                                 </div>
 
