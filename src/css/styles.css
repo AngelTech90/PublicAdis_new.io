@@ -34,6 +34,9 @@
     /* * App button link font size: */
     --app-button-font-size: 1.3rem;
 
+    /* *Step message font size */
+    --step-message-font-size: 2rem;
+
     /* *Icons size */
     --access-icon-width: 2.5rem;
     --access-icon-height: 2.5rem;
@@ -66,8 +69,8 @@
     --phone-app-image-width: 34vw;
     --phone-app-image-height: 109vh;
 
-    --app-slider-image-width: 27vw;
-    --app-slider-image-height: 87vh;
+    --app-slider-image-width: 29vw;
+    --app-slider-image-height: 85vh;
 
 
     /* * Buttons size: */
@@ -451,11 +454,6 @@ body{
 
 }
 
-#proveSliderContainer2{
-
-    overflow: hidden;
-
-}
 
 
 
@@ -655,6 +653,17 @@ body{
 
     width: var(--app-slider-image-width);
     height: var(--app-slider-image-height);
+
+}
+
+.stepMessage{
+
+    font-size: var(--step-message-font-size);
+
+    width: 99%;
+    height: 3vh;
+
+    margin-bottom: 1vh;
 
 }
 

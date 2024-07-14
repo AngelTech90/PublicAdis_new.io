@@ -422,7 +422,7 @@
 
 
             <!-- * Benefits Section -->
-            <section id = "benefitsSection" class = "pageSection">
+            <section id = "benefitsSection" class = "pageSection mb-[4%]">
 
                 <h2 class = "sectionMainTitle" id = "benefitsMainTitle">Beneficios de anunciarte con PublicAdis</h2>
 
@@ -538,7 +538,7 @@
 
                                 }
 
-                            }, 2500);
+                            }, 4500);
 
                         }
 
@@ -548,7 +548,8 @@
                         /* *We use a set inteval for constantly call the function every 4.5 seconds */
                                 setAnimation2 = setInterval(() => {
                                         
-                                currentIndex = 1;    
+                                currentIndex = 1;  
+                        
 
                         /* *And once we reach the first index element we stop our interval and call our animation 1 */
                                     if(currentIndex == 1){
@@ -559,27 +560,27 @@
 
                                     }
 
-                                }, 2500);
+                                }, 4500);
                                 
                         }
 
-
                             animation1();
 
-                            
+                        
                 ">
                 
-                        <div id = "proveSliderContainer" class="relative overflow-hidden w-[28vw] h-[86.9vh]">
-
-                        
+                        <div id = "proveSliderContainer" class="relative overflow-hidden w-[45vw] h-[99vh] bg-white shadow-xl rounded-[1.2rem]">
 
                             <template x-for="(sliderImage, index1) in sliderImages">
 
-                                <div x-show="currentIndex == index1 + 1" x-transition:enter="transition transform duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition transform duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+                                <div x-show="currentIndex == index1 + 1" x-transition:enter="transition transform duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition transform duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class = "flex flex-col items-center justify-center">
 
-                                    <img :src="sliderImage" alt="image" class="appSliderImage" />
+                                    <p x-text="sliderImage.step" class = "stepMessage top-0 absolute text-center w-[100%] h-fit"></p>
+
+                                    <img :src="sliderImage.src" alt="image" class="appSliderImage mt-[16%]" />
 
                                 </div>
+
 
                             </template>
                         </div>
@@ -719,11 +720,30 @@ Alpine.data("imageSlider", () => (
 
             sliderImages: [
 
-                "./src/assets/images/images_for_slider/1.png",
-                "./src/assets/images/images_for_slider/2.png",
-                "./src/assets/images/images_for_slider/3.png",
-                "./src/assets/images/images_for_slider/4.png",
-                "./src/assets/images/images_for_slider/5.png"
+                {   
+                    src:"./src/assets/images/images_for_slider/1.png",
+                    step:"Primero busca el anuncio que quieres publicar."
+                },
+
+                {
+                    src:"./src/assets/images/images_for_slider/2.png",
+                    step:"Luego selecciona el tipo de empleo que quieres publicar."
+                },
+
+                {
+                    src:"./src/assets/images/images_for_slider/3.png",
+                    step:"Añade los datos de tu anuncio."
+                },
+
+                {
+                    src:"./src/assets/images/images_for_slider/4.png",
+                    step:"Pública tu anuncio."
+                },
+
+                {
+                    src:"./src/assets/images/images_for_slider/5.png",
+                    step:"Mira tu nuevo anuncio en nuestra plataforma."
+                }
 
             ]
 
