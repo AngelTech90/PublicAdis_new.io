@@ -1125,8 +1125,8 @@ body{
         --contact-card-border-radius: 1.6rem;
         --main-image-card-width: 100px;
         --main-image-card-height: 100px;
-        --contact-text-font-size: 0.7rem;
-        --contact-span-font-size: 0.8rem;
+        --contact-text-font-size: 0.8rem;
+        --contact-span-font-size: 0.9rem;
         --icons-title-span-font-size: 0.7rem;
         --icons-title-font-size: 0.6rem;
     
@@ -1137,8 +1137,8 @@ body{
         --section-main-title-span: 2.2rem;;
     
         /* *Service titles size: */
-        --service-title-span-size: 0.7rem;
-        --service-title-font-size: 0.6rem;
+        --service-title-span-size: 0.8rem;
+        --service-title-font-size: 0.7rem;
         --service-title-radius-value: 1.2rem;
     
         /* *Benefits titles size */
@@ -1188,13 +1188,13 @@ body{
     
         /* * Images size: */
     
-        --web-app-image-width: 92vw;
+        --web-app-image-width: 103vw;
         --web-app-image-height: 40vh; 
     
-        --phone-app-image-width: 58vw;
-        --phone-app-image-height: 59vh;
+        --phone-app-image-width: 60vw;
+        --phone-app-image-height: 58vh;
     
-        --app-slider-image-width: 55vw;
+        --app-slider-image-width: 58vw;
         --app-slider-image-height: 53.3vh;
     
     
@@ -1346,6 +1346,8 @@ body{
 
         padding: 0%;
 
+        height: 20%;
+
     }
 
     #navOptionsList{
@@ -1367,6 +1369,12 @@ body{
         margin: 0;
 
         width: fit-content;
+
+    }
+
+    #contactsMainTitle{
+
+        margin-bottom: 17%;
 
     }
 
