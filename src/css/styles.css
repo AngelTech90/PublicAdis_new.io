@@ -1149,7 +1149,7 @@ body{
         --normal-font-size:1rem;
     
         /* * Links size: */
-        --link-font-size:0.57rem;
+        --link-font-size:0.5rem;
     
         /* * App button link font size: */
         --app-button-font-size: 0.8rem;
@@ -1319,7 +1319,7 @@ body{
     #sliderSection{
 
         width: 100%;
-        height: 49%;
+        height: 41%;
 
     }
 
