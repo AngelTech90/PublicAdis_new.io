@@ -110,7 +110,7 @@
 
     --background-color: color-mix(in srgb-linear, white 33%, #0ceee3 67%);
 
-    --component-color: #3f5bd6;
+    --component-color: #205372;
 
     --benefit-title-span-color: #45d10e;
 
@@ -1352,7 +1352,7 @@ body{
 
     #navOptionsList{
 
-        background-color: var(--app-button-color);
+        background-color: #205372;
 
         justify-content: center;
         align-items: center;
