@@ -124,107 +124,6 @@
                 <section id = "sliderSection">
 
                     <!-- * Image slider component -->
-
-                    <!-- <main>
-
-                        <div x-data="imageSlider" class="relative" x-init="
-                    
-                            let setAnimation1, setAnimation2;
-
-                            let templateContainer = document.querySelector('#proveSliderContainer2');
-
-                            function checkTemplateDimensions(){
-
-                                if(images[currentIndex].id == 'webAppImage'){
-
-                                    templateContainer.style.width = '67vw';
-                                    templateContainer.style.height = '59.9vh';
-
-                                }
-
-                                if(images[currentIndex].id == 'phoneAppImage'){
-
-                                    templateContainer.style.width = '34vw';
-                                    templateContainer.style.height = '100.9vh';
-
-
-                                }
-
-                                console.log(templateContainer.style.width);
-                                console.log(templateContainer.style.height);
-
-                            }
-    
-                            /* * This functions works for call 'forward()' for iterate the images array index */
-                            function animation1(){
-    
-                            /* *We use a set inteval for constantly call the function every 4.5 seconds */
-                                setAnimation1 = setInterval(() => {
-    
-                                    currentIndex = 1;
-
-                                    checkTemplateDimensions();
-    
-                            /* *And once we reach the last index element we stop our interval and call our animation 2 */
-                                    if(currentIndex == images.length - 1){
-    
-                                        clearInterval(setAnimation1);
-    
-                                        animation2();
-    
-                                    }
-    
-                                }, 2500);
-    
-                            }
-    
-                            /* * This functions works for call 'previous()' for substract the images array index */
-                            function animation2(){
-    
-                            /* *We use a set inteval for constantly call the function every 4.5 seconds */
-                                    setAnimation2 = setInterval(() => {
-                                            
-                                    currentIndex = 0;    
-                                        
-                                    checkTemplateDimensions();
-
-                            /* *And once we reach the first index element we stop our interval and call our animation 1 */
-                                        if(currentIndex == 0){
-    
-                                            clearInterval(setAnimation2);
-    
-                                            animation1();
-    
-                                        }
-    
-                                    }, 2500);
-                                    
-                            }
-
-                                checkTemplateDimensions();
-                                animation1();
-                    ">
-                    
-                            <div class="relative overflow-hidden" id = "proveSliderContainer2">
-    
-                                <template x-for="(image, index) in images">
-    
-                                    <div x-show="currentIndex == index" x-transition:enter="transition transform duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition transform duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
-    
-                                        <a :href="image.link">
-
-                                            <img :src="image.src" :id = "image.id" alt="image" class="mainSliderImage" />
-
-                                        </a>
-                                        
-
-                                    </div>
-    
-                                </template>
-                            </div>
-                        </div>
-                    </main> -->
-
                     <main>
 
                         <div x-data="imageSlider" class="relative" x-init="
@@ -277,7 +176,7 @@
                                 animation1();
                     ">
                     
-                            <div id = "proveSliderContainer" class="relative overflow-hidden w-[58vw] h-[90vh]">
+                            <div id = "proveSliderContainer2" class="relative overflow-hidden w-[58vw] h-[90vh]">
     
                             
 

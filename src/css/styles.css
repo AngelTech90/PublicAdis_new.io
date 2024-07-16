@@ -1188,14 +1188,14 @@ body{
     
         /* * Images size: */
     
-        --web-app-image-width: 103vw;
-        --web-app-image-height: 40vh; 
+        --web-app-image-width: 112vw;
+        --web-app-image-height: 36vh; 
     
-        --phone-app-image-width: 60vw;
-        --phone-app-image-height: 58vh;
+        --phone-app-image-width: 68vw;
+        --phone-app-image-height: 57vh;
     
-        --app-slider-image-width: 58vw;
-        --app-slider-image-height: 53.3vh;
+        --app-slider-image-width: 62vw;
+        --app-slider-image-height: 54.3vh;
     
     
         /* * Buttons size: */
@@ -1272,7 +1272,7 @@ body{
 
     #proveSliderContainer1{
 
-        width: 70vw;
+        width: 89vw;
         height: 65.5vh;
 
     }
@@ -1330,9 +1330,9 @@ body{
 
     }
 
-    #proveSliderContainer{
+    #proveSliderContainer2{
 
-        width: 90vw;
+        width: 100vw;
 
         height: 44vh;
 
