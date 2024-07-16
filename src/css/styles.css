@@ -1254,7 +1254,7 @@ body{
 
         flex-direction: column;
 
-        margin-top: 17%;
+        margin-top: 10%;
 
     }
 
@@ -1375,6 +1375,18 @@ body{
     #contactsMainTitle{
 
         margin-bottom: 17%;
+
+    }
+
+    .singleComponent{
+
+        width: 100%;
+
+    }
+
+    .motherBox{
+
+        width: 100vw;
 
     }
 
