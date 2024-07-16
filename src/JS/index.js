@@ -1,5 +1,6 @@
 
 /* *This file is for make css corrections in our page components */
+let i = 0;
 
 //* *This is for adjust the slider images
 document.getElementById('webAppImage').style.marginTop = '9.5%';
@@ -23,4 +24,36 @@ document.getElementById('logoContainer').onmouseout = () => {
     document.getElementById('pageLogoSpan').style.color = '#ffffff';
 
 }
+
+
+document.getElementById('gmailIcon').onmouseover = () => {
+
+    setTimeout(() => {
+        
+        document.getElementById('gmailIconMessage').style.display = 'block';
+
+    }, 300);
+
+}
+
+
+
+document.getElementById('gmailIcon').onmouseout = () => {
+
+    setTimeout(() => {
+        
+        document.getElementById('gmailIconMessage').style.display = 'none';
+
+    }, 300);
+
+}
+
+document.getElementById('gmailIcon').addEventListener('click',(event)=>{
+
+    event.preventDefault();
+
+    navigator.clipboard.writeText('publicadis@gmail.com');
+
+})
+    
 
