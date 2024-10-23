@@ -1,3 +1,6 @@
+# Deployed site:
+<a href = 'https://angeltech90.github.io/PublicAdis_new.io/'>See the site</a>
+
 # WORK METHODOLOGY
 
 *We'll be working naming our classes using camelCase to make it easier to write code
